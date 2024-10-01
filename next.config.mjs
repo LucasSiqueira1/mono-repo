@@ -1,16 +1,24 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-/** @type {import('next').NextConfig} */
+// import { fileURLToPath } from "url";
+// import path from "path";
 
-import path from "path";
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias["@shared"] = path.resolve(
-      __dirname,
-      "../packages/shared"
-    );
-    return config;
+  experimental: {
+    externalDir: true,
   },
+
+  transpileModules: ["@shared"],
+  // webpack: (config) => {
+  //   // Configurando o alias para o pacote my-app no monorepo
+  //   config.resolve.alias["@shared"] = path.resolve(
+  //     __dirname,
+  //     "packages/my-app"
+  //   );
+
+  //   return config;
+  // },
 };
 
 export default nextConfig;
