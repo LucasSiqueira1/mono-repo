@@ -1,0 +1,3 @@
+[submodule "packages/my-app"]
+	path = packages/my-app
+	url = https://github.com/LucasSiqueira1/my-app
