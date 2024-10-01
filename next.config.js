@@ -28,7 +28,7 @@
  */
 const nextConfig = {
   /* config options here */
-  transpilePackages: ["@shared"],
+  // transpilePackages: ["@shared"],xs
   // webpack: (config) => {
   //   config.resolve.alias["@shared"] = path.resolve(
   //     __dirname,
